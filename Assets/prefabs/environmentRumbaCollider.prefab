@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 3683818153067702251}
   - component: {fileID: 3683818153067702246}
   - component: {fileID: 3683818153067702249}
+  - component: {fileID: 964937041082354734}
   m_Layer: 0
-  m_Name: environment
-  m_TagString: Untagged
+  m_Name: environmentRumbaCollider
+  m_TagString: environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,7 +98,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0031369925, y: 0.0039571524}
+  m_Offset: {x: 0.021558523, y: 0.006075263}
   m_SpriteTilingProperty:
     border: {x: 0.12, y: 0.12, z: 0.07, w: 0.07}
     pivot: {x: 0.5, y: 0.5}
@@ -108,7 +109,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2802863, y: 1.2797394}
+  m_Size: {x: 1.1756222, y: 1.163835}
   m_EdgeRadius: 0
 --- !u!50 &3683818153067702249
 Rigidbody2D:
@@ -131,3 +132,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &964937041082354734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3683818153067702250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9482448e16deb714d9bddafb67da4e8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

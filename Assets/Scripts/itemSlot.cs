@@ -19,6 +19,8 @@ public class itemSlot : MonoBehaviour, IDropHandler
         if(eventData.pointerDrag != null)
         {
             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
+
+
         }
 
 
@@ -40,6 +42,10 @@ public class itemSlot : MonoBehaviour, IDropHandler
         else if (eventData.pointerDrag.name == "Fire")
         {
             execute.instructions[slotNumber] = 5;
+        }
+        else if (eventData.pointerDrag.name == "doorWifi")
+        {
+            execute.instructions[slotNumber] = 6;
         }
 
 
