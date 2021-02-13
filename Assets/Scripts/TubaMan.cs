@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AtomizadorSniper : MonoBehaviour
+public class TubaMan : MonoBehaviour
 {
     public float timer;
-    public GameObject prefab;
+    public GameObject wave;
 
-    private void Update()
+    // Update is called once per frame
+    void Update()
     {
         if(timer > 0)
         {
@@ -15,8 +16,8 @@ public class AtomizadorSniper : MonoBehaviour
         }
         else
         {
-            Instantiate(prefab, transform.position, transform.rotation);
-            timer = 5;
+            Instantiate(wave, transform.position, transform.rotation);
+            timer = 10;
         }
     }
 }
