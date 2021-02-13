@@ -7,6 +7,8 @@ TagManager:
   - environment
   - enemy
   - door
+  - proyectile
+  - water
   layers:
   - Default
   - TransparentFX

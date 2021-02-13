@@ -29,6 +29,14 @@ public class bulletRumba : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        if(collision.tag == "enemy")
+        {
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
+
+
     }
 
 
