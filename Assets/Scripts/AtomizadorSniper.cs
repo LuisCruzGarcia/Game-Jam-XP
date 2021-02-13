@@ -16,7 +16,7 @@ public class AtomizadorSniper : MonoBehaviour
         else
         {
             Instantiate(prefab, transform.position, transform.rotation);
-            timer = 5;
+            timer = 12;
         }
     }
 }
