@@ -1,0 +1,25 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class bulletRumba : MonoBehaviour
+{
+
+    GameObject closestEnemy;
+
+    public float speed;
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        closestEnemy = GameObject.Find("execute").GetComponent<execute>().ClosestEnemy;
+
+
+        transform.position = Vector2.MoveTowards(transform.position, closestEnemy.transform.position, speed*Time.deltaTime);
+    }
+}

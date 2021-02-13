@@ -15,17 +15,21 @@ public class execute : MonoBehaviour
     public bool instructionLimited = false;
 
     bool inst1 = false, inst2 = false, inst3 = false, inst4 = false, inst5 = false, inst6 = false, inst7 = false, inst8 = false;
-    bool[] inst = new bool[8]{ false, false, false, false, false, false, false, false };
+    bool[] inst = new bool[8] { false, false, false, false, false, false, false, false };
 
     public float waitingTime = 10f;
     float timePassed;
-    bool fix = true;
-  
+    bool fix = true; 
+
+    float minDist;
+    public GameObject ClosestEnemy;
+
+    public GameObject bullet;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        minDist = Mathf.Infinity;
         play = GetComponent<Button>();
         play.onClick.AddListener(executeInstructions);
         rumba = GameObject.Find("rumba");
@@ -168,22 +172,34 @@ public class execute : MonoBehaviour
         if (instructions[instructionNumber] == 1)
         {
             rumba.transform.position += transform.up * Time.deltaTime * speed;
+            rumba.transform.rotation = new Quaternion(0f, 0f, 0f, 0f);
         } else if(instructions[instructionNumber] == 2)
         {
             rumba.transform.position += -transform.up * Time.deltaTime * speed;
+            rumba.transform.rotation = new Quaternion(0f, 0f, 180f, 0f);
         }
         else if (instructions[instructionNumber] == 3)
         {
             rumba.transform.position += transform.right * Time.deltaTime * speed;
+            rumba.transform.rotation = new Quaternion(0f, 0f, 270f, 0f);
         }
         else if (instructions[instructionNumber] == 4)
         {
             rumba.transform.position += -transform.right * Time.deltaTime * speed;
+            rumba.transform.rotation = new Quaternion(0f, 0f, 90f, 0f);
         }
         else if (instructions[instructionNumber] == 0)
         {
             inst[instructionNumber] = true;
             inst[instructionNumber - 1] = false;
+        } else if(instructions[instructionNumber] == 5)
+        {
+
+            inst[instructionNumber] = true;
+            inst[instructionNumber - 1] = false;
+            closestTarget();
+            moveRumbaAim();
+            Instantiate(bullet, rumba.transform.position, rumba.transform.rotation);
         }
 
     }
@@ -198,7 +214,42 @@ public class execute : MonoBehaviour
     //    }
     //}
 
+    void closestTarget()
+    {
+        GameObject[] enemies;
+        enemies = GameObject.FindGameObjectsWithTag("enemy");
 
+        foreach(GameObject enemy in enemies)
+        {
+
+            float dist = Vector3.Distance(transform.position, enemy.transform.position);
+
+            if (dist < minDist)
+            {
+
+                ClosestEnemy = enemy;
+                minDist = dist;
+
+            }
+
+            float distClosest = Vector3.Distance(ClosestEnemy.transform.position, transform.position);
+            if (distClosest > minDist)
+            {
+                minDist = distClosest;
+            }
+        }
+
+
+
+    }
+
+
+    void moveRumbaAim()
+    {
+        Vector3 dir = ClosestEnemy.transform.position - rumba.transform.position;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        rumba.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+    }
     
 
 }
