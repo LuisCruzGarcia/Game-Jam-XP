@@ -213,3 +213,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instructions: 0000000000000000000000000000000000000000000000000000000000000000
+  speed: 2
+  instructionLimited: 0
+  waitingTime: 8

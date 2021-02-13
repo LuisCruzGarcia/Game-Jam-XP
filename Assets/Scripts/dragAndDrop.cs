@@ -18,19 +18,19 @@ public class dragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
     }
 
     public void OnPointerDown(PointerEventData eventData) {
-        Debug.Log("down");
+       
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        Debug.Log("enDrag");
+        
         canvasGroup.blocksRaycasts = true;
         canvasGroup.alpha = 1f;
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        Debug.Log("drag");
+        
         rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
 
     }
@@ -39,7 +39,7 @@ public class dragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        Debug.Log("start");
+       
         canvasGroup.blocksRaycasts = false;
         canvasGroup.alpha = .6f;
     }

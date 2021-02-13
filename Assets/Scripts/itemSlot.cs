@@ -37,6 +37,10 @@ public class itemSlot : MonoBehaviour, IDropHandler
         {
             execute.instructions[slotNumber] = 4;
         }
+        else if (eventData.pointerDrag.name == "Fire")
+        {
+            execute.instructions[slotNumber] = 5;
+        }
 
 
     }
