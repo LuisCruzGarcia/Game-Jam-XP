@@ -14,6 +14,9 @@ public class EnemyMovement : MonoBehaviour
     int currentPosition;
     UnityEngine.Vector2 currentPositionHolder;
 
+    public float timerBetweenMovement;
+    public bool flag = true;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -39,16 +42,23 @@ public class EnemyMovement : MonoBehaviour
 
             float angle = Mathf.Atan2(targetPositionX, targetPositionY) * Mathf.Rad2Deg;
 
-            UnityEngine.Vector2 target = new UnityEngine.Vector2(targetPositionX, targetPositionY);
-
-            rb.position += target * Time.deltaTime;
+            transform.position = UnityEngine.Vector2.MoveTowards(transform.position, path[currentPosition].position, speed * Time.deltaTime);
 
             UnityEngine.Quaternion rotation = UnityEngine.Quaternion.Euler(new UnityEngine.Vector3(0, 0, -angle));
             transform.rotation = UnityEngine.Quaternion.Slerp(transform.rotation, rotation, 5 * Time.deltaTime);
-        } else
+        } else if(flag)
         {
-            currentPosition++;
-            CheckPath();
+            StartCoroutine(Wait(timerBetweenMovement));
+            flag = false;
         }
+    }
+
+    private IEnumerator Wait(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime); 
+        currentPosition++;
+        CheckPath();
+        Debug.Log("Coroutine called");
+        flag = true;
     }
 }

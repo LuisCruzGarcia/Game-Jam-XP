@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7985330734315049415}
   - component: {fileID: 7985330734315049414}
   - component: {fileID: 7985330734315049413}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cangrejo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
