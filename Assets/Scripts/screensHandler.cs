@@ -17,8 +17,10 @@ public class screensHandler : MonoBehaviour
         instructions = GameObject.Find("instructions");
         gameOver = GameObject.Find("GameOver");
 
-       
-        
+        menu = GameObject.Find("menu").GetComponent<Button>();
+        menu.onClick.AddListener(loadMenu);
+        reload = GameObject.Find("reload").GetComponent<Button>();
+        reload.onClick.AddListener(reloadScene);
 
 
         gameOver.SetActive(false);
@@ -46,8 +48,13 @@ public class screensHandler : MonoBehaviour
 
     void reloadScene()
     {
-        Debug.Log("patata");
+        
         SceneManager.LoadScene(scene.name);
+    }
+
+    void loadMenu()
+    {
+        SceneManager.LoadScene(1);
     }
 
 
