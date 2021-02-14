@@ -17,5 +17,5 @@ MonoBehaviour:
   sentence:
   - "\xA1Tengo que confesar mi amor! Plutarco, ya te vi en mis sistemas: est\xE1s
     en el \xFAltimo piso, \xA1voy por ti, rey chulo! \u2665\u203F\u2665 "
-  background: {fileID: 21300000, guid: 7719c43dabffa1f45aa73cf7ffcd4920, type: 3}
+  background: {fileID: 21300000, guid: f3f6a519bbf5931459743fb5b972a7ba, type: 3}
   color: {r: 0.15294118, g: 0.83137256, b: 0.6901961, a: 1}

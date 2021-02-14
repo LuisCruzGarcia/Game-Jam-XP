@@ -17,5 +17,5 @@ MonoBehaviour:
   sentence:
   - 'DISPAROS_DETECTADOS. MEDIDAS DE SEGURIDAD ACTIVADAS. EDIFICIO EN CONTINGENCIA
     Y EXTERMINIO. NADIE SALE VIVO. '
-  background: {fileID: 21300000, guid: 7719c43dabffa1f45aa73cf7ffcd4920, type: 3}
+  background: {fileID: 21300000, guid: f3f6a519bbf5931459743fb5b972a7ba, type: 3}
   color: {r: 0, g: 0, b: 0, a: 0}
