@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3303664123114666570}
   m_Layer: 0
   m_Name: lobby2
-  m_TagString: Untagged
+  m_TagString: environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
