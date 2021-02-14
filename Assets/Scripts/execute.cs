@@ -14,7 +14,7 @@ public class execute : MonoBehaviour
     public float speed = 5f;
     public bool instructionLimited = false;
 
-    bool inst1 = false, inst2 = false, inst3 = false, inst4 = false, inst5 = false, inst6 = false, inst7 = false, inst8 = false;
+    
     bool[] inst = new bool[8] { false, false, false, false, false, false, false, false };
 
     public float waitingTime = 10f;
@@ -26,13 +26,16 @@ public class execute : MonoBehaviour
     public float timeToFire = 2f;
     public GameObject bullet;
 
-    bool doorsOpen = false;
+ 
     bool fired = false;
 
     int currentInstruction;
     float originalSpeed;
     int powerUpInstruction;
-
+    public bool shieldOn = false;
+    bool speedOn = false;
+    GameObject shieldImage;
+    int shieldHealth;
     
     // Start is called before the first frame update
     void Start()
@@ -43,6 +46,11 @@ public class execute : MonoBehaviour
         rumba = GameObject.Find("rumba");
         powerUpInstruction = 0;
         originalSpeed = speed;
+
+        shieldImage = GameObject.Find("shield");
+        shieldImage.SetActive(false);
+
+
     }
 
     // Update is called once per frame
@@ -63,6 +71,19 @@ public class execute : MonoBehaviour
 
         if (done)
         {
+
+
+            //ShieldDisabler
+
+
+            if (shieldOn == true && GameObject.Find("rumba").GetComponent<rumbaHealth>().health < shieldHealth)
+            {
+                shieldOn = false;
+                
+                shieldImage.SetActive(false);
+                rumba.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255);
+            }
+
 
             //1
             if (!instructionLimited && !inst[0] && fix)
@@ -202,6 +223,11 @@ public class execute : MonoBehaviour
 
 
         }
+
+
+        
+
+
 
 
 
@@ -374,8 +400,20 @@ public class execute : MonoBehaviour
         powerUpInstruction = currentInstruction + 1;
         speed = speed * 2;
         rumba.GetComponent<SpriteRenderer>().color = new Color(0, 255, 37);
+        speedOn = true;
         
         
+    }
+
+
+    public void shield()
+    {
+        shieldImage.SetActive(true);
+        powerUpInstruction = currentInstruction + 1;
+        rumba.GetComponent<SpriteRenderer>().color = new Color(221, 0, 255);
+        GameObject.Find("rumba").GetComponent<rumbaHealth>().health++;
+        shieldHealth = GameObject.Find("rumba").GetComponent<rumbaHealth>().health;
+
     }
 
 
@@ -383,8 +421,23 @@ public class execute : MonoBehaviour
     {
         if(currentInstruction > powerUpInstruction)
         {
-            speed = originalSpeed;
+            if (speedOn)
+            {
+                speed = originalSpeed;
+            }
+            
             rumba.GetComponent<SpriteRenderer>().color = new Color(255,255,255);
+
+            if(shieldOn == true)
+            {
+                shieldImage.SetActive(false);
+                shieldOn = false;
+                if(GameObject.Find("rumba").GetComponent<rumbaHealth>().health > 1) {
+
+                    GameObject.Find("rumba").GetComponent<rumbaHealth>().health--;
+                    shieldImage.SetActive(false);
+                }
+            }
         }
         
     }
