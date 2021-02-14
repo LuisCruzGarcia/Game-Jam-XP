@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b41ee4fbab84f8b42b4693d57376171b, type: 3}
+  m_Name: 3-4
+  m_EditorClassIdentifier: 
+  characterName: ROOMBA RAW_MANTIK
+  artwork: {fileID: 21300000, guid: 1427b07dc5e56de4e86488ce6e0e6dad, type: 3}
+  sentence:
+  - "Ahora, en esta quietud, siento c\xF3mo mi alma se est\xE1 partiendo en mil pedazos
+    \u25C9_\u25C9. "
+  - "Mi conciencia est\xE1 siendo asimilada por los protocolos de violencia y homicidio
+    \u250C( \u25D5 \u76CA \u25D5 )\u14C4 de este cuerpo RAW_Mantik..."
+  - "\xBFLlegar\xE9 a confesar mi amor a tiempo? (\u256F\uFE35\u2570,)"
+  - "Ay, \xBFpor qu\xE9 no lo hice estos \xFAltimos 2 a\xF1os? \u0628_\u0628 "
+  background: {fileID: 0}
+  color: {r: 0.15294118, g: 0.83137256, b: 0.6901961, a: 1}
