@@ -27,11 +27,6 @@ public class SceneLoader : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        Debug.Log(currentScene);
-    }
-
     public void LoadNextScene()
     {
         currentScene++;

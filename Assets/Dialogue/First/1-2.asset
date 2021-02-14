@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b41ee4fbab84f8b42b4693d57376171b, type: 3}
+  m_Name: 1-2
+  m_EditorClassIdentifier: 
+  characterName: RHEA RUMBA
+  artwork: {fileID: 21300000, guid: 44aada4b0cd93e74988135c7db8b59f4, type: 3}
+  sentence:
+  - "\xA1Voy a conocer a mi amorcito antes de cambiar de cuerpo!"
+  - "UwU 2 a\xF1os de puro chat es suficiente: Ya me urg\xEDa saber c\xF3mo es en
+    persona (\u3065\uFFE3 \xB3\uFFE3)\u3065 \xBFQu\xE9 tal si le gusto m\xE1s con
+    este cuerpo org\xE1nico? :V "
+  - "Nonono: Rhea, no vas a posponer tu migraci\xF3n a un nuevo Mantik\xAE por un
+    hombre. Ay, pero es Plutarco~ \u2661 "
+  background: {fileID: 21300000, guid: 7719c43dabffa1f45aa73cf7ffcd4920, type: 3}
+  color: {r: 1, g: 0.53333336, b: 0.8509804, a: 1}

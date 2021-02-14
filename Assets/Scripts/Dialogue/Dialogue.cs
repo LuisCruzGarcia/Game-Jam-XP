@@ -9,4 +9,5 @@ public class Dialogue : ScriptableObject
     public Sprite artwork;
     public string[] sentence;
     public Sprite background;
+    public Color color;
 }

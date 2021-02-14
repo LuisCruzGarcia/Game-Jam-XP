@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b41ee4fbab84f8b42b4693d57376171b, type: 3}
+  m_Name: 1-3
+  m_EditorClassIdentifier: 
+  characterName: 
+  artwork: {fileID: 21300000, guid: 89e0bb878ac40e54dbd569e414bcbfd3, type: 3}
+  sentence:
+  - Rhea Rumba se dirige a la Plaza MetaGaribaldi para darle muchos otakubesos a
+    su novio virtual.
+  - "\xC9l tambi\xE9n la busca, est\xE1 enamorado, pero hay una raz\xF3n de peso
+    por la que pas\xF3 2 a\xF1os bajo un sobrenombre digital an\xF3nimo... "
+  background: {fileID: 21300000, guid: 7719c43dabffa1f45aa73cf7ffcd4920, type: 3}
+  color: {r: 0, g: 0, b: 0, a: 0}
