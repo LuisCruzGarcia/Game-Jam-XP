@@ -39,6 +39,8 @@ public class execute : MonoBehaviour
     int shieldHealth;
     public float waterDown = 1f;
 
+    AudioSource rumbaShoot;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,6 +54,7 @@ public class execute : MonoBehaviour
         shieldImage = GameObject.Find("shield");
         shieldImage.SetActive(false);
 
+        rumbaShoot = rumba.GetComponent<AudioSource>();
 
     }
 
@@ -281,6 +284,7 @@ public class execute : MonoBehaviour
             closestTarget();
             moveRumbaAim();
             StartCoroutine(waitToFire(instructionNumber));
+            rumbaShoot.Play(0);
             fired = false;
         }
 
