@@ -33,10 +33,12 @@ public class execute : MonoBehaviour
     float originalSpeed;
     int powerUpInstruction;
     public bool shieldOn = false;
+    bool waterOn = false;
     bool speedOn = false;
     GameObject shieldImage;
     int shieldHealth;
-    
+    public float waterDown = 1f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -416,6 +418,13 @@ public class execute : MonoBehaviour
 
     }
 
+    public void water()
+    {
+        powerUpInstruction = currentInstruction + 1;
+        speed = speed - waterDown;
+        waterOn = true;
+    }
+
 
     public void resetPowerUp()
     {
@@ -424,6 +433,13 @@ public class execute : MonoBehaviour
             if (speedOn)
             {
                 speed = originalSpeed;
+                speedOn = false;
+            }
+
+            if (waterOn)
+            {
+                speed = originalSpeed;
+                waterOn = false;
             }
             
             rumba.GetComponent<SpriteRenderer>().color = new Color(255,255,255);

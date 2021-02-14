@@ -58,7 +58,7 @@ public class EnemyMovement : MonoBehaviour
         yield return new WaitForSeconds(waitTime); 
         currentPosition++;
         CheckPath();
-        Debug.Log("Coroutine called");
+        //Debug.Log("Coroutine called");
         flag = true;
     }
 }
