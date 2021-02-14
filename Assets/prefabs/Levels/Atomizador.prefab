@@ -146,12 +146,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 962206996136319815}
-  speed: 0
+  speed: 4
   path:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  timerBetweenMovement: 0
+  flag: 1
 --- !u!114 &962206996136319813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,5 +166,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83edafa72a929914bac0c5bf2408f198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 12
+  timer: 3
   prefab: {fileID: 2030854381797896785, guid: e1691fa5ae03e6145a352476304d8f11, type: 3}
