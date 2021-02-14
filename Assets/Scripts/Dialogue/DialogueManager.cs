@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
@@ -13,6 +14,13 @@ public class DialogueManager : MonoBehaviour
     public Dialogue[] dialogue;
     int sentencePosition;
     int dialoguePosition;
+
+    SceneLoader scene;
+
+    private void Awake()
+    {
+        scene = FindObjectOfType<SceneLoader>();
+    }
 
     private void Start()
     {
@@ -44,7 +52,7 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("No mas");
+            scene.LoadNextScene();
         }
 
     }
