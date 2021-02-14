@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b41ee4fbab84f8b42b4693d57376171b, type: 3}
+  m_Name: 4-4
+  m_EditorClassIdentifier: 
+  characterName: PLUTARCO PAUSANIAS
+  artwork: {fileID: 21300000, guid: da77318b2c28139439228eed23156fb1, type: 3}
+  sentence:
+  - "No s\xE9 qui\xE9n seas, amable Mantik, pero por favor desact\xEDvate: tal vez
+    nos perdone la vida a los dos..."
+  background: {fileID: 21300000, guid: e41464af56b798a41a83d67f7ab0ce11, type: 3}
+  color: {r: 0.8666667, g: 0.6156863, b: 0.14509805, a: 1}

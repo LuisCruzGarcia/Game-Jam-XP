@@ -18,5 +18,5 @@ MonoBehaviour:
   - "Unos cuerpos pesados se levantan, empapados, generados en laboratorio. Nuevos
     Mantiks, acerc\xE1ndose cada vez m\xE1s a su m\xEDtica inspiraci\xF3n, la Mant\xEDcora,
     estos monstruos horrorosos est\xE1n hechos de..."
-  background: {fileID: 0}
+  background: {fileID: 21300000, guid: ce833a98f906e6940bb3032281ebf69b, type: 3}
   color: {r: 0, g: 0, b: 0, a: 0}

@@ -19,5 +19,5 @@ MonoBehaviour:
     si ya sali\xF3 la carne o si tienes que seguirla cuidando, compa."
   - "\u0B67\u0F3C\u0CA0\u76CA\u0CA0\u256D\u2229\u256E\u0F3D Yo tengo que pasar, as\xED
     que, con su permiso-- "
-  background: {fileID: 0}
+  background: {fileID: 21300000, guid: ce833a98f906e6940bb3032281ebf69b, type: 3}
   color: {r: 0.15294118, g: 0.83137256, b: 0.6901961, a: 1}

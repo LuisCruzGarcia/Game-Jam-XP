@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b41ee4fbab84f8b42b4693d57376171b, type: 3}
+  m_Name: 5-7
+  m_EditorClassIdentifier: 
+  characterName: 
+  artwork: {fileID: 21300000, guid: 89e0bb878ac40e54dbd569e414bcbfd3, type: 3}
+  sentence:
+  - "Sin darle tiempo a reaccionar, el ALFA_Mantik salta por la ventana del \xFAltimo
+    piso"
+  - "su cuerpo met\xE1lico resiste el aterrizaje, y corre hacia el horizonte, hacia
+    alg\xFAn lugar que su coraz\xF3n anhela. "
+  - 'Plutarco ahora es un animal libre de la carga que es el amor humano. '
+  - "Rhea queda en silencio, hasta que poco a poco se acercan las sirenas de polic\xEDas
+    y militares."
+  - Los siente subiendo los pisos, trepando por sus dominios, faltando al respeto
+    a su camino de amor. Rhea carga su pistola, arde un rosa fulgurante en sus ojos,
+  - "\xA1El amor sigue en tu coraz\xF3n, Roomba RAW_Mantik! Y cuando amas, tiras
+    la bala. Es entonces cuando Rhea se susurra en voz baja. "
+  background: {fileID: 21300000, guid: ed43c2c3ee2bc2e41bdebdac279a3830, type: 3}
+  color: {r: 0, g: 0, b: 0, a: 0}

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b41ee4fbab84f8b42b4693d57376171b, type: 3}
+  m_Name: 4-6
+  m_EditorClassIdentifier: 
+  characterName: 'RHEA RUMBA '
+  artwork: {fileID: 21300000, guid: 1427b07dc5e56de4e86488ce6e0e6dad, type: 3}
+  sentence:
+  - "\xA1Soy yo! \u2764 \xA1Pedacito de maruchan crujiente, soy Rhea! \uFF5E(^\u0437^)-\u2661
+    Llegu\xE9 tarde a nuestra cita porque tu mam\xE1 me mat\xF3 y puso mi conciencia
+    en este Mantik,"
+  - "\u25DE\u2038\u25DF\uFF09 pero el poder del amor y el homicidio me trajo hasta
+    aqu\xED. (\u25D5_\u25D5)=\u03B5/\u0335\u0347\u033F\u033F/''''\u033F''''\u033F
+    \u033F Solo quer\xEDa decirte que t\xFA me-- "
+  - ...
+  - "\xA1Me-me gustas mucho! ( \u0361\u0CA0 \u035C\u0296 \u0361\u0CA0)"
+  background: {fileID: 21300000, guid: e41464af56b798a41a83d67f7ab0ce11, type: 3}
+  color: {r: 0.15294118, g: 0.83137256, b: 0.6901961, a: 1}

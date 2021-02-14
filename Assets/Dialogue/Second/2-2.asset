@@ -19,5 +19,5 @@ MonoBehaviour:
   - "Necesito hablar con el futuro presidente de la compa\xF1\xEDa (\u0B87\uFE4F\u0B87`\uFF61)
     para confesarle mi amor (\u2022 \u03B5 \u2022)"
   - "\xA1no importa que sea unos a\xF1os menor que yo! (\xA4\uFE4F\xA4)"
-  background: {fileID: 21300000, guid: ce833a98f906e6940bb3032281ebf69b, type: 3}
+  background: {fileID: 21300000, guid: 4f5d67685821bda44b5a04ae6afe0c38, type: 3}
   color: {r: 0.15294118, g: 0.83137256, b: 0.6901961, a: 1}

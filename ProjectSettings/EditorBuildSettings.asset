@@ -6,9 +6,36 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/UI/Logo.unity
+    guid: a75c58626b913f7449824e07ac2d4ff5
+  - enabled: 1
+    path: Assets/Scenes/UI/Menu.unity
+    guid: 40a3af6fa505ed34ab169f3db4f9184a
+  - enabled: 1
+    path: Assets/Scenes/Visual Novel/First Scene.unity
+    guid: d3c990e38e7e29d44aeae6fced87fac8
+  - enabled: 1
+    path: Assets/Scenes/Visual Novel/Second Scene.unity
+    guid: f7734f85943c213448382b4308f3cf4e
+  - enabled: 1
+    path: Assets/Scenes/Visual Novel/Third Scene.unity
+    guid: 4ffd441bdacb3134394cf7e97d154caf
+  - enabled: 1
+    path: Assets/Scenes/Visual Novel/Fourth Scene.unity
+    guid: 3a58e26fd027d864cb043a6bcfd98e17
+  - enabled: 1
+    path: Assets/Scenes/Visual Novel/Quinta scene.unity
+    guid: b3676ce415ea7a94fa22ae64fd6ff8e1
+  - enabled: 1
+    path: Assets/Scenes/UI/Creditos.unity
+    guid: ffca7f5985e931b47b9566a78bab5ad3
+  - enabled: 1
+    path: Assets/Scenes/UI/Controles.unity
+    guid: 71080150b4656a94d80dea38cdd49d0c
+  - enabled: 0
     path: Assets/Scenes/Levels/Level1.unity
     guid: 71dd78f7ebceecc46a3c9f71b52185e8
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
