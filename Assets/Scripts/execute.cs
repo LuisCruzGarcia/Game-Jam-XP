@@ -47,6 +47,8 @@ public class execute : MonoBehaviour
     public float back = 1.5f;
     bool backDone = false;
 
+    bool doorOpen = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -343,9 +345,27 @@ public class execute : MonoBehaviour
                 moveRumbaAim();
                 StartCoroutine(waitToFire(instructionNumber));
                 rumbaShoot.Play(0);
+            } else
+            {
+                if (instructionNumber == 0)
+                {
+                    inst[0] = true;
+                    instructionLimited = false;
+                    fix = false;
+                }
+                else
+                {
+                    inst[instructionNumber] = true;
+                    inst[instructionNumber - 1] = false;
+                }
+
             }
             
             fired = false;
+
+           
+
+
         }
 
         else if (instructions[instructionNumber] == 6)
@@ -369,14 +389,25 @@ public class execute : MonoBehaviour
             GameObject[] doors;
             doors = GameObject.FindGameObjectsWithTag("door");
 
-
-            foreach (GameObject door in doors)
+            if (doors != null)
             {
-                door.transform.Rotate(0.0f, 80.0f, 0.0f, Space.Self);
-                door.transform.position = new Vector3(door.transform.position.x - 1.5f, door.transform.position.y, door.transform.position.z);
+                foreach (GameObject door in doors)
+                {
+                    if (!doorOpen)
+                    {
+                        door.transform.Rotate(0.0f, 80.0f, 0.0f, Space.Self);
+                        door.transform.position = new Vector3(door.transform.position.x - 1.5f, door.transform.position.y, door.transform.position.z);
+                        doorOpen = true;
+                    } else
+                    {
+                        door.transform.Rotate(0.0f, 160.0f, 0.0f, Space.Self);
+                        door.transform.position = new Vector3(door.transform.position.x + 1.5f, door.transform.position.y, door.transform.position.z);
+                        doorOpen = false;
+                    }
+                    
+                }
+
             }
-
-
 
 
 

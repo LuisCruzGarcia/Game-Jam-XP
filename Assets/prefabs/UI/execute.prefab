@@ -216,3 +216,9 @@ MonoBehaviour:
   speed: 2
   instructionLimited: 0
   waitingTime: 8
+  ClosestEnemy: {fileID: 0}
+  timeToFire: 2
+  bullet: {fileID: 0}
+  shieldOn: 0
+  waterDown: 1
+  back: 0.09
