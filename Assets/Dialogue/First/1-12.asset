@@ -16,5 +16,5 @@ MonoBehaviour:
   artwork: {fileID: 21300000, guid: 1427b07dc5e56de4e86488ce6e0e6dad, type: 3}
   sentence:
   - "UwU, \xBFqu\xE9 me pas\xF3? \u2181_\u2181 Me siento... LLENA DE PODER (\u25E3_\u25E2)."
-  background: {fileID: 21300000, guid: 7719c43dabffa1f45aa73cf7ffcd4920, type: 3}
+  background: {fileID: 21300000, guid: f3f6a519bbf5931459743fb5b972a7ba, type: 3}
   color: {r: 0.1527234, g: 0.8301887, b: 0.6901961, a: 1}
