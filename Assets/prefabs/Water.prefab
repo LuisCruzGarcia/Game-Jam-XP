@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2030854381797896786}
   - component: {fileID: 2030854381797896787}
-  - component: {fileID: 2030854381797896788}
-  - component: {fileID: 4991773955635976837}
+  - component: {fileID: -1107302931210181713}
+  - component: {fileID: 6221634259551187139}
   m_Layer: 0
   m_Name: Water
   m_TagString: water
@@ -84,8 +84,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &2030854381797896788
-CircleCollider2D:
+--- !u!114 &-1107302931210181713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030854381797896785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a04015ef1833611498c2e5fac57cd1d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &6221634259551187139
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -97,20 +109,16 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.020568132, y: -0.078532755}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.28, y: 1.28}
+    newSize: {x: 0.2, y: 0.2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.4
---- !u!114 &4991773955635976837
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2030854381797896785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a060fd6ed7170043a0effaab8a776c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slow: 3
-  timer: 20
+  m_Size: {x: 0.812544, y: 1.0406624}
+  m_EdgeRadius: 0
