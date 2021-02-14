@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 public class dragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler 
 {
-
+    public GameObject slot;
     private RectTransform rectTransform;
     Canvas canvas;
     CanvasGroup canvasGroup;
@@ -32,6 +32,7 @@ public class dragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
     {
         
         rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
+        slot.GetComponent<itemSlot>().resetSlot();
 
     }
     

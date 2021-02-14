@@ -41,6 +41,12 @@ public class execute : MonoBehaviour
 
     AudioSource rumbaShoot;
 
+
+    bool empty = true;
+
+    public float back = 1.5f;
+    bool backDone = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -63,7 +69,22 @@ public class execute : MonoBehaviour
     void executeInstructions()
     {
 
+
         done = true;
+        foreach(int instruction in instructions)
+        {
+            if(instruction != 0)
+            {
+                empty = false;
+                break;
+            }
+
+            if(instruction == 0)
+            {
+                empty = true;
+            }
+        }
+
 
     }
 
@@ -74,10 +95,10 @@ public class execute : MonoBehaviour
 
 
 
-        if (done)
+        if (done && !empty)
         {
 
-
+            Debug.Log("z");
             //ShieldDisabler
 
 
@@ -106,6 +127,7 @@ public class execute : MonoBehaviour
                 inst[0] = true;
                 instructionLimited = false;
                 fix = false;
+                backDone = false;
             }
 
             //2    //hacer que este no se repita
@@ -126,6 +148,7 @@ public class execute : MonoBehaviour
 
                 inst[1] = true;
                 instructionLimited = false;
+                backDone = false;
             }
 
             //3
@@ -142,6 +165,7 @@ public class execute : MonoBehaviour
                 inst[1] = false;
                 inst[2] = true;
                 instructionLimited = false;
+                backDone = false;
             }
 
             //4
@@ -158,6 +182,7 @@ public class execute : MonoBehaviour
                 inst[2] = false;
                 inst[3] = true;
                 instructionLimited = false;
+                backDone = false;
             }
 
             //5
@@ -174,6 +199,7 @@ public class execute : MonoBehaviour
                 inst[3] = false;
                 inst[4] = true;
                 instructionLimited = false;
+                backDone = false;
             }
 
             //6
@@ -190,6 +216,7 @@ public class execute : MonoBehaviour
                 inst[4] = false;
                 inst[5] = true;
                 instructionLimited = false;
+                backDone = false;
             }
 
             //7
@@ -206,6 +233,7 @@ public class execute : MonoBehaviour
                 inst[5] = false;
                 inst[6] = true;
                 instructionLimited = false;
+                backDone = false;
             }
 
             //8
@@ -216,6 +244,10 @@ public class execute : MonoBehaviour
 
                 currentInstruction = 7;
                 resetPowerUp();
+                
+                
+
+                resetInstructions();
             }
             else if (inst[6] && instructionLimited)
             {
@@ -223,6 +255,8 @@ public class execute : MonoBehaviour
                 inst[6] = false;
                 inst[7] = true;
                 instructionLimited = false;
+                backDone = false;
+
             }
 
 
@@ -243,20 +277,42 @@ public class execute : MonoBehaviour
     {
         if (instructions[instructionNumber] == 1)
         {
+            if (!backDone)
+            {
+                rumba.transform.position = new Vector2(rumba.transform.position.x, rumba.transform.position.y - back);
+                backDone = true;
+            }
+            
             rumba.transform.position += transform.up * Time.deltaTime * speed;
             rumba.transform.rotation = new Quaternion(0f, 0f, 90f, 0f);
         } else if (instructions[instructionNumber] == 2)
         {
+            if (!backDone)
+            {
+                rumba.transform.position = new Vector2(rumba.transform.position.x, rumba.transform.position.y + back);
+                backDone = true;
+            }
+
             rumba.transform.position += -transform.up * Time.deltaTime * speed;
             rumba.transform.rotation = new Quaternion(0f, 0f, 270f, 0f);
         }
         else if (instructions[instructionNumber] == 3)
         {
+            if (!backDone)
+            {
+                rumba.transform.position = new Vector2(rumba.transform.position.x - back, rumba.transform.position.y);
+                backDone = true;
+            }
             rumba.transform.position += transform.right * Time.deltaTime * speed;
             rumba.transform.rotation = new Quaternion(0f, 0f, 0f, 0f);
         }
         else if (instructions[instructionNumber] == 4)
         {
+            if (!backDone)
+            {
+                rumba.transform.position = new Vector2(rumba.transform.position.x + back, rumba.transform.position.y);
+                backDone = true;
+            }
             rumba.transform.position += -transform.right * Time.deltaTime * speed;
             rumba.transform.rotation = new Quaternion(0f, 0f, 180f, 0f);
         }
@@ -282,9 +338,13 @@ public class execute : MonoBehaviour
 
 
             closestTarget();
-            moveRumbaAim();
-            StartCoroutine(waitToFire(instructionNumber));
-            rumbaShoot.Play(0);
+            if(ClosestEnemy != null)
+            {
+                moveRumbaAim();
+                StartCoroutine(waitToFire(instructionNumber));
+                rumbaShoot.Play(0);
+            }
+            
             fired = false;
         }
 
@@ -460,6 +520,42 @@ public class execute : MonoBehaviour
             }
         }
         
+    }
+
+
+    public void resetInstructions()
+    {
+        
+
+        done = false;
+        empty = true;
+
+        for(int i = 0; i < inst.Length; i++)
+        {
+            inst[i] = false;
+        }
+
+        Debug.Log("e");
+
+        currentInstruction = 0;
+
+        instructionLimited = false;
+
+        fix = true;
+
+        backDone = false;
+
+        GameObject.Find("iSlot1").GetComponent<Image>().color = new Color(255, 255, 255);
+        GameObject.Find("iSlot2").GetComponent<Image>().color = new Color(255, 255, 255);
+        GameObject.Find("iSlot3").GetComponent<Image>().color = new Color(255, 255, 255);
+        GameObject.Find("iSlot4").GetComponent<Image>().color = new Color(255, 255, 255);
+        GameObject.Find("iSlot5").GetComponent<Image>().color = new Color(255, 255, 255);
+        GameObject.Find("iSlot6").GetComponent<Image>().color = new Color(255, 255, 255);
+        GameObject.Find("iSlot7").GetComponent<Image>().color = new Color(255, 255, 255);
+        GameObject.Find("iSlot8").GetComponent<Image>().color = new Color(255, 255, 255);
+
+
+
     }
 
 }

@@ -8,6 +8,7 @@ public class EnvironmentCollision : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         gameObject.GetComponent<Collider2D>().enabled = false;
+        gameObject.GetComponent<Collider2D>().enabled = true;
     }
 
     IEnumerator colliderEnabler()
