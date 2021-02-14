@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 625263532136216380}
   - component: {fileID: 625263532136216381}
   - component: {fileID: 625263532136216382}
+  - component: {fileID: -7971964907806842532}
   m_Layer: 0
   m_Name: Fusca
   m_TagString: Untagged
@@ -153,3 +154,17 @@ MonoBehaviour:
   - {fileID: 0}
   timerBetweenMovement: 5
   flag: 1
+--- !u!114 &-7971964907806842532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 625263532136216377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc09a74c22ef831468cf3b55e8cd24ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Proyectile: {fileID: 5888272891520907399, guid: 6e2d6eedf4f934846bbd6c60ea134717, type: 3}
+  timeRemaining: 3
