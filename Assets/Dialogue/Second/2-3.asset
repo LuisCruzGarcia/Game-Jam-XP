@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b41ee4fbab84f8b42b4693d57376171b, type: 3}
+  m_Name: 2-3
+  m_EditorClassIdentifier: 
+  characterName: "SILLA DE RECEPCI\xD3N"
+  artwork: {fileID: 21300000, guid: 7ba5d272dfe655040bf619e5b6d72a6a, type: 3}
+  sentence:
+  - "\xA1Jam\xE1s! Una MANTIK como t\xFA, sin sutileza, sin suavidad, jam\xE1s podr\xEDa
+    recibir a Plutarco y sus asentaderas preciosas."
+  - "Yo soy el mejor mueble Mantik que hay aqu\xED, \xBFqu\xE9 te hace pensar que
+    mereces siquiera VER sus pompis? "
+  background: {fileID: 21300000, guid: ce833a98f906e6940bb3032281ebf69b, type: 3}
+  color: {r: 0.2911925, g: 0.8113208, b: 0.13394445, a: 1}
