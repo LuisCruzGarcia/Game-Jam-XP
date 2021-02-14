@@ -7,6 +7,8 @@ public class itemSlot : MonoBehaviour, IDropHandler
 {
     public int slotNumber;
     execute execute;
+    GameObject instruction;
+    
 
     private void Start()
     {
@@ -19,9 +21,9 @@ public class itemSlot : MonoBehaviour, IDropHandler
         if(eventData.pointerDrag != null)
         {
             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
+            eventData.pointerDrag.GetComponent<dragAndDrop>().slot = this.gameObject;
 
-
-        }
+        } 
 
 
         if(eventData.pointerDrag.name == "instructionUp")
@@ -50,5 +52,18 @@ public class itemSlot : MonoBehaviour, IDropHandler
 
 
     }
+
+
+    public void resetSlot()
+    {
+        execute.instructions[slotNumber] = 0;
+    }
+
+
+    private void Update()
+    {
+        
+    }
+
 
 }
