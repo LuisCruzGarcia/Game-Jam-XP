@@ -809,6 +809,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Screens
       objectReference: {fileID: 0}
+    - target: {fileID: 341521572464429847, guid: 4fbc66a2b5336d64b9e36944b1dc1092, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 341521572464429847, guid: 4fbc66a2b5336d64b9e36944b1dc1092, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 341521572464429847, guid: 4fbc66a2b5336d64b9e36944b1dc1092, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1920
+      objectReference: {fileID: 0}
     - target: {fileID: 2127358332282375936, guid: 4fbc66a2b5336d64b9e36944b1dc1092, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -893,6 +905,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4832788262124978967, guid: 4fbc66a2b5336d64b9e36944b1dc1092, type: 3}
+      propertyPath: m_PixelPerfect
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fbc66a2b5336d64b9e36944b1dc1092, type: 3}
 --- !u!224 &4499072367840791187 stripped
@@ -910,6 +926,22 @@ PrefabInstance:
     - target: {fileID: 8351139053751618914, guid: 7c0ef07c326711048ac89a4dbddd47f5, type: 3}
       propertyPath: m_Name
       value: instructions
+      objectReference: {fileID: 0}
+    - target: {fileID: 8351139053751620252, guid: 7c0ef07c326711048ac89a4dbddd47f5, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8351139053751620252, guid: 7c0ef07c326711048ac89a4dbddd47f5, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 8351139053751620252, guid: 7c0ef07c326711048ac89a4dbddd47f5, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 8351139053751620253, guid: 7c0ef07c326711048ac89a4dbddd47f5, type: 3}
+      propertyPath: m_PixelPerfect
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8351139053751620254, guid: 7c0ef07c326711048ac89a4dbddd47f5, type: 3}
       propertyPath: m_LocalPosition.x

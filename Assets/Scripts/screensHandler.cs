@@ -11,7 +11,9 @@ public class screensHandler : MonoBehaviour
     GameObject instructions, gameOver;
     Button menu;
     Button reload;
-    Scene scene;
+
+    public SceneLoader scene;
+
     void Start()
     {
         instructions = GameObject.Find("instructions");
@@ -22,19 +24,9 @@ public class screensHandler : MonoBehaviour
         reload = GameObject.Find("reload").GetComponent<Button>();
         reload.onClick.AddListener(reloadScene);
 
-
         gameOver.SetActive(false);
 
-        
-
-
-        
-
-    }
-
-    private void Update()
-    {
-        scene = SceneManager.GetActiveScene();
+        scene = FindObjectOfType<SceneLoader>();
     }
 
     // Update is called once per frame
@@ -49,7 +41,7 @@ public class screensHandler : MonoBehaviour
     void reloadScene()
     {
         
-        SceneManager.LoadScene(scene.name);
+        SceneManager.LoadScene(scene.GetScene());
     }
 
     void loadMenu()

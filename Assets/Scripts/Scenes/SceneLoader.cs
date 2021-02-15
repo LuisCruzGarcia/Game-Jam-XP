@@ -12,8 +12,7 @@ public class SceneLoader : MonoBehaviour
     public GameObject UIPuntuacion;
     public Text uiPuntuacionText;
 
-    
-
+   
     void Awake()
     {
         this.InstantiateController();
@@ -31,6 +30,11 @@ public class SceneLoader : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+    }
+
+    public int GetScene()
+    {
+        return currentScene;
     }
 
     public void LoadNextScene()
