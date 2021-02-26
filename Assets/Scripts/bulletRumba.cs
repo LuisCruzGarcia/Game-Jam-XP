@@ -27,11 +27,13 @@ public class bulletRumba : MonoBehaviour
     {
         if(collision.tag == "environment")
         {
+            GameObject.Find("execute").GetComponent<execute>().isDestroyed = true;
             Destroy(gameObject);
         }
 
         if(collision.tag == "enemy")
         {
+            GameObject.Find("execute").GetComponent<execute>().isDestroyed = true;
             Destroy(collision.gameObject);
             Destroy(gameObject);
         }

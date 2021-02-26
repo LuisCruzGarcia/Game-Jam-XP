@@ -49,6 +49,8 @@ public class execute : MonoBehaviour
 
     bool doorOpen = false;
 
+    public bool isDestroyed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -100,7 +102,7 @@ public class execute : MonoBehaviour
         if (done && !empty)
         {
 
-            Debug.Log("z");
+           
             //ShieldDisabler
 
 
@@ -266,8 +268,8 @@ public class execute : MonoBehaviour
         }
 
 
-        
 
+        
 
 
 
@@ -335,18 +337,29 @@ public class execute : MonoBehaviour
         }
         else if (instructions[instructionNumber] == 5)
         {
-            
+
             //fireInstruction
 
-
+            minDist = Mathf.Infinity;
             closestTarget();
+            
+
             if(ClosestEnemy != null)
             {
                 moveRumbaAim();
                 StartCoroutine(waitToFire(instructionNumber));
                 rumbaShoot.Play(0);
+                
+                if(isDestroyed)
+                {
+                    ClosestEnemy = null;
+                    isDestroyed = false;
+                }
+
+                
             } else
             {
+                Debug.Log("error");
                 if (instructionNumber == 0)
                 {
                     inst[0] = true;
@@ -430,10 +443,22 @@ public class execute : MonoBehaviour
         GameObject[] enemies;
         enemies = GameObject.FindGameObjectsWithTag("enemy");
 
+       
+
         foreach (GameObject enemy in enemies)
         {
 
-            float dist = Vector3.Distance(transform.position, enemy.transform.position);
+            float dist = Vector2.Distance(enemy.transform.position, rumba.transform.position);
+
+            Debug.Log(enemy.name);
+            Debug.Log(dist);
+
+            //if (isDestroyed)
+            //{
+            //    isDestroyed = false;
+            //    minDist = Mathf.Infinity;
+                
+            //}
 
             if (dist < minDist)
             {
@@ -443,14 +468,14 @@ public class execute : MonoBehaviour
 
             }
 
-            float distClosest = Vector3.Distance(ClosestEnemy.transform.position, transform.position);
-            if (distClosest > minDist)
-            {
-                minDist = distClosest;
-            }
+            //float distClosest = Vector3.Distance(ClosestEnemy.transform.position, transform.position);
+            //if (distClosest > minDist)
+            //{
+            //    minDist = distClosest;
+            //}
         }
 
-
+       
 
     }
 

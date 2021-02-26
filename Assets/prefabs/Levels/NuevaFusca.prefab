@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 625263532136216382}
   - component: {fileID: -7971964907806842532}
   m_Layer: 0
-  m_Name: Fusca
-  m_TagString: Untagged
+  m_Name: NuevaFusca
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
